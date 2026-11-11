@@ -21,7 +21,103 @@ body{min-height:100vh;margin:0;background:#0c0e1e;color:var(--ink);font-family:I
 .game .glyph{position:absolute;top:33px;left:20px;font-size:80px;line-height:1;filter:drop-shadow(0 11px 13px #0008);transform:rotate(-8deg);z-index:1}
 .game strong{position:relative;z-index:2;font-size:16px;line-height:1.1;font-weight:900;text-shadow:0 2px 6px #000a}
 .game small{position:relative;z-index:2;font-size:10px;font-weight:700;color:#ffffffca;margin-top:5px}
-.game.one{background:linear-gradient(130deg,#1a1b4a,#5a6ae0 60%,#987aff)}<!doctype html>
+.game.one{background:linear-gradient(130deg,#1a1b4a,#5a6ae0 60%,#987aff)}
+.game.two{background:linear-gradient(140deg,#122a40,#3a6b9a 56%,#91edc6)}
+.game.three{background:linear-gradient(140deg,#3a1f5a,#7a5aff 65%,#c4a8ff)}
+.game.four{background:linear-gradient(140deg,#1a3a40,#4a9a8a 65%,#91edc6)}
+.game.five{background:linear-gradient(140deg,#2a1f50,#7a5aff,#b8a0ff)}
+.game.six{background:linear-gradient(140deg,#2a1a40,#6a4aff,#a080ff)}
+.game:nth-child(2n){transform:translateY(50px)}
+.game:nth-child(5n){transform:translateY(-16px)}
+.game:nth-child(n+7){opacity:.65}
+.shell{max-width:1040px;min-height:100svh;margin:auto;position:relative;z-index:2;display:flex;flex-direction:column;padding:29px 30px 26px}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:11px;font-size:20px;font-weight:930;letter-spacing:-.055em}
+.logo{width:24px;height:24px;background:white;border-radius:3px;transform:rotate(18deg);display:grid;place-items:center;flex-shrink:0}
+.logo:after{content:"";width:9px;height:9px;background:#161127}
+.nav-right{font-size:10px;letter-spacing:.14em;color:#c6b7dc;font-weight:900}
+.nav-right span{color:#91edc6}
+.hero{width:100%;max-width:705px;margin:auto;text-align:center;padding:76px 0 65px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;border:1px solid #987aff70;background:#1a1630de;color:#b8a0ff;border-radius:30px;padding:10px 16px;font-size:11px;font-weight:950;letter-spacing:.15em;text-transform:uppercase;box-shadow:0 10px 34px #0005}
+.eyebrow i{height:6px;width:6px;border-radius:50%;background:#987aff;box-shadow:0 0 0 5px #987aff26}
+h1{font-weight:1000;line-height:1.02;letter-spacing:-.07em;font-size:clamp(44px,7.1vw,82px);margin:26px auto 19px;text-shadow:0 9px 28px #0008}
+h1 em{display:block;font-style:normal;background:linear-gradient(93deg,#ac8aff 9%,#987aff 55%,#91edc6 93%);color:transparent;background-clip:text;-webkit-background-clip:text}
+.intro{max-width:565px;margin:0 auto 35px;line-height:1.55;color:#aeb8d0;font-size:clamp(15px,2vw,17px)}
+.lookup-card{max-width:565px;margin:auto;background:linear-gradient(145deg,#1a1e3af2,#12162afa);border:1px solid #987aff38;border-radius:25px;padding:22px;box-shadow:0 20px 65px #0009,inset 0 1px #ffffff14;text-align:left}
+.continue-link{width:100%;min-height:61px;padding:16px 20px;display:flex;align-items:center;justify-content:center;gap:9px;border-radius:13px;background:linear-gradient(110deg,#a88aff,#8266f5);color:#fff;text-decoration:none;font-size:17px;font-weight:900;line-height:1.2;text-align:center;transition:transform .12s;box-shadow:0 4px 0 #4a379f,0 12px 24px #4e39ab45}
+.continue-link:active{transform:translateY(2px)}
+.continue-link:focus-visible{outline:3px solid #fff;outline-offset:4px}
+.continue-link span{font-size:21px}
+.continue-note{margin:13px 0 0;font-size:12px;line-height:1.4;color:#aeb8d0;text-align:center;font-weight:650}
+.below{display:flex;align-items:center;justify-content:center;gap:19px;margin-top:20px;color:#aeb8d0;font-size:11px;font-weight:650}
+.below span{display:inline-flex;align-items:center;gap:6px}
+.check{color:#91edc6;font-weight:950}
+.foot{display:flex;align-items:center;justify-content:space-between;gap:20px;color:#8a96b0;font-size:10px;line-height:1.55}
+.foot p{margin:0}
+.foot b{color:#c6b7dc;font-weight:750}
+@media(max-width:600px){
+  .shell{padding:20px 18px 25px}
+  .brand{font-size:18px}
+  .logo{width:19px;height:19px}
+  .logo:after{width:7px;height:7px}
+  .nav-right{font-size:9px}
+  .wall{top:-5px;width:750px;grid-template-columns:repeat(6,113px);gap:12px;opacity:.55}
+  .game{height:135px;padding:9px;border-radius:13px}
+  .game .glyph{font-size:51px;top:20px;left:13px}
+  .game strong{font-size:11px}
+  .game small{font-size:8px}
+  .hero{padding:75px 0 50px}
+  h1{font-size:clamp(44px,11.8vw,65px);margin-top:22px}
+  .intro{margin-bottom:28px;font-size:14px}
+  .lookup-card{padding:16px;border-radius:18px}
+  .below{gap:10px;flex-wrap:wrap;font-size:10px}
+  .foot{display:block;text-align:center}
+  .foot p+p{margin-top:5px}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="wall" aria-hidden="true">
+    <div class="game one"><span class="glyph">🏘️</span><strong>Brookhaven RP</strong><small>Explore & roleplay</small></div>
+    <div class="game two"><span class="glyph">⚔️</span><strong>Blox Fruits</strong><small>Adventure</small></div>
+    <div class="game three"><span class="glyph">✨</span><strong>Dress to Impress</strong><small>Fashion & style</small></div>
+    <div class="game four"><span class="glyph">🐾</span><strong>Adopt Me!</strong><small>Pets & friends</small></div>
+    <div class="game five"><span class="glyph">🎯</span><strong>RIVALS</strong><small>Action</small></div>
+    <div class="game six"><span class="glyph">🎢</span><strong>Obby World</strong><small>Challenge</small></div>
+    <div class="game six"><span class="glyph">🌅</span><strong>Adventure</strong><small>Explore worlds</small></div>
+    <div class="game three"><span class="glyph">👑</span><strong>Fashion Runway</strong><small>Style ideas</small></div>
+    <div class="game two"><span class="glyph">🌊</span><strong>Sea Quest</strong><small>Island adventure</small></div>
+    <div class="game one"><span class="glyph">🏡</span><strong>Roleplay World</strong><small>Build & discover</small></div>
+    <div class="game four"><span class="glyph">🌸</span><strong>Pet Life</strong><small>Adopt & play</small></div>
+    <div class="game five"><span class="glyph">🚀</span><strong>Arcade Quest</strong><small>New challenges</small></div>
+  </div>
+  <div class="shell">
+    <header class="nav">
+      <div class="brand"><span class="logo" aria-hidden="true"></span>ROBLOX <span style="opacity:.35;font-weight:400">/</span> REWARDS</div>
+      <div class="nav-right">BLACK FRIDAY <span>2026</span> <span aria-hidden="true">✦</span></div>
+    </header>
+    <main class="hero">
+      <div class="eyebrow"><i></i> Black Friday Reward Picks</div>
+      <h1>BLACK FRIDAY <em>ROBLOX REWARDS</em></h1>
+      <p class="intro">Explore featured Roblox gift-card and avatar-item offers. Rewards depend on completing each provider’s qualifying steps.</p>
+      <div class="lookup-card" aria-label="Continue to Roblox rewards offers">
+        <a class="continue-link" href="main.html">Continue to Rewards <span aria-hidden="true">→</span></a>
+        <p class="continue-note">No Roblox username needed</p>
+      </div>
+      <div class="below">
+        <span><b class="check">✓</b> No account lookup</span>
+        <span><b class="check">✓</b> Offer requirements apply</span>
+      </div>
+    </main>
+    <footer class="foot">
+      <p><b>Independent rewards guide.</b> Not affiliated with or endorsed by Roblox or any featured game.</p>
+      <p>Any rewards depend on the offer provider's actual terms and eligibility.</p>
+    </footer>
+  </div>
+</div>
+</body>
+</html><!doctype html>
 <html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0c0c1c"><meta name="robots" content="noindex,nofollow"><title>Roblox Reward Offers — Playful</title>
 <style>
@@ -166,99 +262,3 @@ h1{margin:0;color:#fff;font-size:var(--font-display);font-weight:1000;line-heigh
 })();
 </script>
 </body></html>
-.game.two{background:linear-gradient(140deg,#122a40,#3a6b9a 56%,#91edc6)}
-.game.three{background:linear-gradient(140deg,#3a1f5a,#7a5aff 65%,#c4a8ff)}
-.game.four{background:linear-gradient(140deg,#1a3a40,#4a9a8a 65%,#91edc6)}
-.game.five{background:linear-gradient(140deg,#2a1f50,#7a5aff,#b8a0ff)}
-.game.six{background:linear-gradient(140deg,#2a1a40,#6a4aff,#a080ff)}
-.game:nth-child(2n){transform:translateY(50px)}
-.game:nth-child(5n){transform:translateY(-16px)}
-.game:nth-child(n+7){opacity:.65}
-.shell{max-width:1040px;min-height:100svh;margin:auto;position:relative;z-index:2;display:flex;flex-direction:column;padding:29px 30px 26px}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:20px}
-.brand{display:flex;align-items:center;gap:11px;font-size:20px;font-weight:930;letter-spacing:-.055em}
-.logo{width:24px;height:24px;background:white;border-radius:3px;transform:rotate(18deg);display:grid;place-items:center;flex-shrink:0}
-.logo:after{content:"";width:9px;height:9px;background:#161127}
-.nav-right{font-size:10px;letter-spacing:.14em;color:#c6b7dc;font-weight:900}
-.nav-right span{color:#91edc6}
-.hero{width:100%;max-width:705px;margin:auto;text-align:center;padding:76px 0 65px}
-.eyebrow{display:inline-flex;align-items:center;gap:9px;border:1px solid #987aff70;background:#1a1630de;color:#b8a0ff;border-radius:30px;padding:10px 16px;font-size:11px;font-weight:950;letter-spacing:.15em;text-transform:uppercase;box-shadow:0 10px 34px #0005}
-.eyebrow i{height:6px;width:6px;border-radius:50%;background:#987aff;box-shadow:0 0 0 5px #987aff26}
-h1{font-weight:1000;line-height:1.02;letter-spacing:-.07em;font-size:clamp(44px,7.1vw,82px);margin:26px auto 19px;text-shadow:0 9px 28px #0008}
-h1 em{display:block;font-style:normal;background:linear-gradient(93deg,#ac8aff 9%,#987aff 55%,#91edc6 93%);color:transparent;background-clip:text;-webkit-background-clip:text}
-.intro{max-width:565px;margin:0 auto 35px;line-height:1.55;color:#aeb8d0;font-size:clamp(15px,2vw,17px)}
-.lookup-card{max-width:565px;margin:auto;background:linear-gradient(145deg,#1a1e3af2,#12162afa);border:1px solid #987aff38;border-radius:25px;padding:22px;box-shadow:0 20px 65px #0009,inset 0 1px #ffffff14;text-align:left}
-.continue-link{width:100%;min-height:61px;padding:16px 20px;display:flex;align-items:center;justify-content:center;gap:9px;border-radius:13px;background:linear-gradient(110deg,#a88aff,#8266f5);color:#fff;text-decoration:none;font-size:17px;font-weight:900;line-height:1.2;text-align:center;transition:transform .12s;box-shadow:0 4px 0 #4a379f,0 12px 24px #4e39ab45}
-.continue-link:active{transform:translateY(2px)}
-.continue-link:focus-visible{outline:3px solid #fff;outline-offset:4px}
-.continue-link span{font-size:21px}
-.continue-note{margin:13px 0 0;font-size:12px;line-height:1.4;color:#aeb8d0;text-align:center;font-weight:650}
-.below{display:flex;align-items:center;justify-content:center;gap:19px;margin-top:20px;color:#aeb8d0;font-size:11px;font-weight:650}
-.below span{display:inline-flex;align-items:center;gap:6px}
-.check{color:#91edc6;font-weight:950}
-.foot{display:flex;align-items:center;justify-content:space-between;gap:20px;color:#8a96b0;font-size:10px;line-height:1.55}
-.foot p{margin:0}
-.foot b{color:#c6b7dc;font-weight:750}
-@media(max-width:600px){
-  .shell{padding:20px 18px 25px}
-  .brand{font-size:18px}
-  .logo{width:19px;height:19px}
-  .logo:after{width:7px;height:7px}
-  .nav-right{font-size:9px}
-  .wall{top:-5px;width:750px;grid-template-columns:repeat(6,113px);gap:12px;opacity:.55}
-  .game{height:135px;padding:9px;border-radius:13px}
-  .game .glyph{font-size:51px;top:20px;left:13px}
-  .game strong{font-size:11px}
-  .game small{font-size:8px}
-  .hero{padding:75px 0 50px}
-  h1{font-size:clamp(44px,11.8vw,65px);margin-top:22px}
-  .intro{margin-bottom:28px;font-size:14px}
-  .lookup-card{padding:16px;border-radius:18px}
-  .below{gap:10px;flex-wrap:wrap;font-size:10px}
-  .foot{display:block;text-align:center}
-  .foot p+p{margin-top:5px}
-}
-</style>
-</head>
-<body>
-<div class="page">
-  <div class="wall" aria-hidden="true">
-    <div class="game one"><span class="glyph">🏘️</span><strong>Brookhaven RP</strong><small>Explore & roleplay</small></div>
-    <div class="game two"><span class="glyph">⚔️</span><strong>Blox Fruits</strong><small>Adventure</small></div>
-    <div class="game three"><span class="glyph">✨</span><strong>Dress to Impress</strong><small>Fashion & style</small></div>
-    <div class="game four"><span class="glyph">🐾</span><strong>Adopt Me!</strong><small>Pets & friends</small></div>
-    <div class="game five"><span class="glyph">🎯</span><strong>RIVALS</strong><small>Action</small></div>
-    <div class="game six"><span class="glyph">🎢</span><strong>Obby World</strong><small>Challenge</small></div>
-    <div class="game six"><span class="glyph">🌅</span><strong>Adventure</strong><small>Explore worlds</small></div>
-    <div class="game three"><span class="glyph">👑</span><strong>Fashion Runway</strong><small>Style ideas</small></div>
-    <div class="game two"><span class="glyph">🌊</span><strong>Sea Quest</strong><small>Island adventure</small></div>
-    <div class="game one"><span class="glyph">🏡</span><strong>Roleplay World</strong><small>Build & discover</small></div>
-    <div class="game four"><span class="glyph">🌸</span><strong>Pet Life</strong><small>Adopt & play</small></div>
-    <div class="game five"><span class="glyph">🚀</span><strong>Arcade Quest</strong><small>New challenges</small></div>
-  </div>
-  <div class="shell">
-    <header class="nav">
-      <div class="brand"><span class="logo" aria-hidden="true"></span>ROBLOX <span style="opacity:.35;font-weight:400">/</span> REWARDS</div>
-      <div class="nav-right">BLACK FRIDAY <span>2026</span> <span aria-hidden="true">✦</span></div>
-    </header>
-    <main class="hero">
-      <div class="eyebrow"><i></i> Black Friday Reward Picks</div>
-      <h1>BLACK FRIDAY <em>ROBLOX REWARDS</em></h1>
-      <p class="intro">Explore featured Roblox gift-card and avatar-item offers. Rewards depend on completing each provider’s qualifying steps.</p>
-      <div class="lookup-card" aria-label="Continue to Roblox rewards offers">
-        <a class="continue-link" href="main.html">Continue to Rewards <span aria-hidden="true">→</span></a>
-        <p class="continue-note">No Roblox username needed</p>
-      </div>
-      <div class="below">
-        <span><b class="check">✓</b> No account lookup</span>
-        <span><b class="check">✓</b> Offer requirements apply</span>
-      </div>
-    </main>
-    <footer class="foot">
-      <p><b>Independent rewards guide.</b> Not affiliated with or endorsed by Roblox or any featured game.</p>
-      <p>Any rewards depend on the offer provider's actual terms and eligibility.</p>
-    </footer>
-  </div>
-</div>
-</body>
-</html>
